@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары - Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../src/styles.css">
+</head>
+<body class="bg-light">
+    <div class="container-fluid p-0">
+        
+        <header class="bg-dark text-white py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h1 class="h3 mb-1">Моё Портфолио</h1>
+                        <p class="mb-0 opacity-75">Студент разработчик</p>
+                    </div>
+                    <div class="col-auto">
+                        <span class="badge bg-light text-warning">ЭФБО-13-24</span>
+                        <button class="btn btn-outline-light btn-sm ms-2" id="themeSwitch" type="button">
+                            <i class="bi bi-sun"></i> Тема
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">
+                                <i class="bi bi-newspaper me-1"></i>Новости
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="practices.html">
+                                <i class="bi bi-code-slash me-1"></i>Практики
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="goods.html">
+                                <i class="bi bi-cart me-1"></i>Товары
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        
+        <main class="container my-4">
+            
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <h1 class="h2 text-warning mb-1">
+                                <i class="bi bi-shop me-2"></i>Товары
+                            </h1>
+                            <p class="text-muted mb-0">Эксклюзивные товары премиального качества</p>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-outline-warning dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-funnel me-1"></i>Сортировка
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-up me-1"></i>По цене (возр.)</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-arrow-down me-1"></i>По цене (убыв.)</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-star me-1"></i>По популярности</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="row g-4">
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 position-relative">
+                        <span class="position-absolute top-0 start-0 badge bg-danger m-2 z-1">
+                            <i class="bi bi-percent me-1"></i>Скидка
+                        </span>
+                        <div class="card-img-container position-relative overflow-hidden" style="height: 250px;">
+                            <img src="../img/1 yanqwip.png" alt="Эксклюзивный товар #1" class="card-img-top h-100 w-100" style="object-fit: cover;">
+                            <div class="position-absolute top-0 end-0 p-2">
+                                <button class="btn btn-outline-light btn-sm rounded-circle" data-bs-toggle="tooltip" title="Добавить в избранное">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-warning">Эксклюзивный товар #1</h5>
+                            <p class="card-text text-muted flex-grow-1">Премиальное качество и уникальный дизайн для истинных ценителей стиля</p>
+                            <div class="price-section mb-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="text-decoration-line-through text-muted">1,200,000 ₽</span>
+                                    <span class="h5 text-dark mb-0">1,000,000 ₽</span>
+                                </div>
+                                <small class="text-dark">
+                                    <i class="bi bi-arrow-down me-1"></i>Экономия: 200,000 ₽
+                                </small>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary">
+                                    <i class="bi bi-cart-plus me-1"></i>Купить
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm">
+                                    <i class="bi bi-eye me-1"></i>Подробнее
+                                </button>
+                            </div>
+                            <div class="mt-2">
+                                <span class="badge bg-dark me-1">Новинка</span>
+                                <span class="badge bg-warning">В наличии</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow border-primary position-relative">
+                        <span class="position-absolute top-0 start-0 badge bg-dark m-2 z-1">
+                            <i class="bi bi-star-fill me-1"></i>Хит продаж
+                        </span>
+                        <div class="card-img-container position-relative overflow-hidden" style="height: 250px;">
+                            <img src="../img/1 yanqwip.png" alt="Эксклюзивный товар #2" class="card-img-top h-100 w-100" style="object-fit: cover;">
+                            <div class="position-absolute top-0 end-0 p-2">
+                                <button class="btn btn-outline-light btn-sm rounded-circle" data-bs-toggle="tooltip" title="Добавить в избранное">
+                                    <i class="bi bi-heart-fill text-danger"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-warning">Эксклюзивный товар #2</h5>
+                            <p class="card-text text-muted flex-grow-1">Высококачественные материалы и инновационные технологии</p>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="text-warning me-2">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <small class="text-muted">(127 отзывов)</small>
+                                </div>
+                                <span class="h5 text-warning mb-0">1,000,000 ₽</span>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary">
+                                    <i class="bi bi-cart-plus me-1"></i>Купить
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm">
+                                    <i class="bi bi-eye me-1"></i>Подробнее
+                                </button>
+                            </div>
+                            <div class="mt-2">
+                                <span class="badge bg-warning">Популярный</span>
+                                <span class="badge bg-warning">В наличии</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 position-relative">
+                        <span class="position-absolute top-0 start-0 badge bg-warning m-2 z-1">
+                            <i class="bi bi-gem me-1"></i>Премиум
+                        </span>
+                        <div class="card-img-container position-relative overflow-hidden" style="height: 250px;">
+                            <img src="../img/1 yanqwip.png" alt="Эксклюзивный товар #3" class="card-img-top h-100 w-100" style="object-fit: cover;">
+                            <div class="position-absolute top-0 end-0 p-2">
+                                <button class="btn btn-outline-light btn-sm rounded-circle" data-bs-toggle="tooltip" title="Добавить в избранное">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-warning">Эксклюзивный товар #3</h5>
+                            <p class="card-text text-muted flex-grow-1">Ограниченная серия для истинных ценителей качества и стиля</p>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="text-warning me-2">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star"></i>
+                                    </div>
+                                    <small class="text-muted">(89 отзывов)</small>
+                                </div>
+                                <span class="h5 text-warning mb-0">1,000,000 ₽</span>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary">
+                                    <i class="bi bi-cart-plus me-1"></i>Купить
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm">
+                                    <i class="bi bi-eye me-1"></i>Подробнее
+                                </button>
+                            </div>
+                            <div class="mt-2">
+                                <span class="badge bg-secondary">Лимитированная серия</span>
+                                <span class="badge bg-warning text-dark">Осталось 3 шт.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="row mt-5">
+                <div class="col">
+                    <div class="alert alert-info d-flex align-items-center" role="alert">
+                        <i class="bi bi-info-circle-fill me-3 fs-4"></i>
+                        <div>
+                            <h6 class="alert-heading mb-1">Специальное предложение!</h6>
+                            <p class="mb-0">При покупке двух товаров - скидка 15% на третий товар. Акция действует до конца месяца.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="row mt-4">
+                <div class="col">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">
+                                <i class="bi bi-envelope me-2"></i>Подписаться на новости
+                            </h5>
+                            <p class="card-text">Получайте информацию о новых товарах и специальных предложениях</p>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" placeholder="Ваш email">
+                                        <button class="btn btn-light text-warning" type="button">
+                                            <i class="bi bi-send me-1"></i>Подписаться
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-dark text-white py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2025 Портфолио студента. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/theme.js"></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+</body>
+</html>
+
+

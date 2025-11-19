@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Дневник - Портфолио Студента</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    <header class="header-main">
+        <div class="container">
+            <div class="logo-section d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="logo-icon">DA</div>
+                    <h1 class="student-name mb-0">Дамир Ахмеров</h1>
+                </div>
+                <button class="btn btn-outline-light" id="themeSwitch" type="button">
+                    <i class="bi bi-sun"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <nav aria-label="Основная навигация" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="bi bi-house-fill me-1"></i>Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">
+                            <i class="bi bi-folder-fill me-1"></i>Проекты
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="diary.html">
+                            <i class="bi bi-journal-text me-1"></i>Дневник
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">
+                            <i class="bi bi-envelope-fill me-1"></i>Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container my-5" id="main">
+        <section class="mb-4">
+            <h2 class="page-title" style="color: #FFD700;">
+                <i class="bi bi-journal-bookmark-fill me-2"></i>Мой учебный прогресс
+            </h2>
+            <p class="text-muted">Здесь я отслеживаю свое обучение и развитие навыков</p>
+        </section>
+        <section class="mb-5">
+            <div class="card shadow">
+                <div class="card-header" style="background-color: #FFD700 !important; color: #000000 !important;" class="d-flex justify-content-between align-items-center">
+                    <h3 class="h5 mb-0" style="color: #000000 !important;">
+                        <i class="bi bi-calendar-week me-2"></i>Последние записи
+                    </h3>
+                    <button class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#addEntryModal">
+                        <i class="bi bi-plus-circle me-1"></i>Добавить запись
+                    </button>
+                </div>
+                <div class="card-body p-4">
+                    <div id="diaryEntries">
+                        <div class="diary-entry mb-3">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="badge bg-success me-2">
+                                            <i class="bi bi-check-circle"></i>
+                                        </span>
+                                        <h5 class="mb-0">Верстка макета сайта</h5>
+                                    </div>
+                                    <p class="text-muted small mb-2">
+                                        <i class="bi bi-calendar3 me-1"></i>15 декабря 2024
+                                    </p>
+                                    <p class="mb-0">Завершил верстку адаптивного макета личного сайта. Использовал Flexbox и Grid для создания responsive layout.</p>
+                                </div>
+                                <span class="badge bg-success ms-3">Завершено</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="diary-entry mb-3">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="badge bg-success me-2">
+                                            <i class="bi bi-check-circle"></i>
+                                        </span>
+                                        <h5 class="mb-0">JavaScript основы</h5>
+                                    </div>
+                                    <p class="text-muted small mb-2">
+                                        <i class="bi bi-calendar3 me-1"></i>10 декабря 2024
+                                    </p>
+                                    <p class="mb-0">Изучил основы JavaScript: переменные, функции, циклы и работу с DOM. Создал несколько интерактивных элементов.</p>
+                                </div>
+                                <span class="badge bg-success ms-3">Завершено</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="diary-entry mb-3">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="badge bg-warning me-2">
+                                            <i class="bi bi-hourglass-split"></i>
+                                        </span>
+                                        <h5 class="mb-0">Работа с формами</h5>
+                                    </div>
+                                    <p class="text-muted small mb-2">
+                                        <i class="bi bi-calendar3 me-1"></i>5 декабря 2024
+                                    </p>
+                                    <p class="mb-0">В процессе изучения валидации форм и отправки данных. Осваиваю паттерны и регулярные выражения.</p>
+                                </div>
+                                <span class="badge bg-warning ms-3">В процессе</span>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <div class="diary-entry">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="badge bg-warning me-2">
+                                            <i class="bi bi-hourglass-split"></i>
+                                        </span>
+                                        <h5 class="mb-0">Адаптивный дизайн</h5>
+                                    </div>
+                                    <p class="text-muted small mb-2">
+                                        <i class="bi bi-calendar3 me-1"></i>1 декабря 2024
+                                    </p>
+                                    <p class="mb-0">Изучаю принципы responsive design и mobile-first подход. Практикуюсь в создании адаптивных макетов.</p>
+                                </div>
+                                <span class="badge bg-warning ms-3">В процессе</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="mb-5">
+            <div class="card shadow">
+                <div class="card-header" style="background-color: #FFD700 !important; color: #000000 !important;">
+                    <h3 class="h5 mb-0" style="color: #000000 !important;">
+                        <i class="bi bi-book me-2"></i>Текущие курсы
+                    </h3>
+                </div>
+                <div class="card-body p-4">
+                    
+                    <div class="course-item mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <h5 class="mb-0">Веб-разработка</h5>
+                            <span class="text-primary fw-bold">80%</span>
+                        </div>
+                        <div class="progress" style="height: 30px;">
+                            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" 
+                                 role="progressbar" 
+                                 style="width: 80%" 
+                                 aria-valuenow="80" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="100">
+                                80%
+                            </div>
+                        </div>
+                        <p class="text-muted small mt-2 mb-0">HTML, CSS</p>
+                    </div>
+
+                    
+                    <div class="course-item mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <h5 class="mb-0">JavaScript</h5>
+                            <span class="text-warning fw-bold">70%</span>
+                        </div>
+                        <div class="progress" style="height: 30px;">
+                            <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" 
+                                 role="progressbar" 
+                                 style="width: 70%" 
+                                 aria-valuenow="70" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="100">
+                                70%
+                            </div>
+                        </div>
+                        <p class="text-muted small mt-2 mb-0">DOM</p>
+                    </div>
+
+                    <div class="course-item">
+                        <div class="d-flex justify-content-between mb-2">
+                            <h5 class="mb-0">React</h5>
+                            <span class="text-info fw-bold">90%</span>
+                        </div>
+                        <div class="progress" style="height: 30px;">
+                            <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" 
+                                 role="progressbar" 
+                                 style="width: 90%" 
+                                 aria-valuenow="90" 
+                                 aria-valuemin="0" 
+                                 aria-valuemax="100">
+                                90%
+                            </div>
+                        </div>
+                        <p class="text-muted small mt-2 mb-0">Components, Hooks, State Management, React Router</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card shadow text-center h-100">
+                        <div class="card-body">
+                            <img src="../img/1 yanqwip.png" alt="Завершенные курсы" class="img-fluid mb-3" style="max-height: 60px; width: auto;">
+                            <h3 class="display-5 fw-bold">12</h3>
+                            <p class="text-muted mb-0">Завершенных курсов</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow text-center h-100">
+                        <div class="card-body">
+                            <img src="../img/1 yanqwip.png" alt="Курсы в процессе" class="img-fluid mb-3" style="max-height: 60px; width: auto;">
+                            <h3 class="display-5 fw-bold">3</h3>
+                            <p class="text-muted mb-0">Курсов в процессе</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow text-center h-100">
+                        <div class="card-body">
+                            <img src="../img/1 yanqwip.png" alt="Выполненные проекты" class="img-fluid mb-3" style="max-height: 60px; width: auto;">
+                            <h3 class="display-5 fw-bold">24</h3>
+                            <p class="text-muted mb-0">Выполненных проектов</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <div class="modal fade" id="addEntryModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="bi bi-plus-circle me-2"></i>Добавить запись
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addEntryForm">
+                        <div class="mb-3">
+                            <label for="entryTitle" class="form-label">Название</label>
+                            <input type="text" class="form-control" id="entryTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="entryDate" class="form-label">Дата</label>
+                            <input type="date" class="form-control" id="entryDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="entryDescription" class="form-label">Описание</label>
+                            <textarea class="form-control" id="entryDescription" rows="4" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="entryStatus" class="form-label">Статус</label>
+                            <select class="form-select" id="entryStatus" required>
+                                <option value="in-progress">В процессе</option>
+                                <option value="completed">Завершено</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary" id="saveEntry">Добавить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer class="footer-main mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2025 Дамир Ахмеров. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="contacts.html" class="footer-link me-3">
+                        <i class="bi bi-envelope me-1"></i>Контакты
+                    </a>
+                    <a href="https://github.com/SeyYestyq" class="footer-link" target="_blank">
+                        <i class="bi bi-github me-1"></i>GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/theme.js"></script>
+    <script src="../scripts/diary.js"></script>
+</body>
+</html>
+

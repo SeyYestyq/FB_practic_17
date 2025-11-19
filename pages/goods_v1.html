@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семестровая работа</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <button class="theme-switch" id="themeSwitch" type="button">Переключить тему</button>
+        <h1 class="header__title">Моё портфолио</h1>
+    </header>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+            <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+            <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li>
+            <li class="nav__item nav__item--active"><a class="nav__link" href="goods.html">Товары</a></li>
+            <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <div class="goods__header">
+            <h1 class="page__title">Товары</h1>
+        </div>
+
+        <div class="goods__grid">
+            <div class="product-card product-card--discount">
+                <span class="product-card__badge">Скидка</span>
+                <img src="../img/1 yanqwip.png" alt="Товар 1" class="product-card__image">
+                <div class="product-card__info">
+                    <h3 class="product-card__name">Эксклюзивный товар #1</h3>
+                    <p class="product-card__description">Премиальное качество и уникальный дизайн</p>
+                    <div class="product-card__price-wrapper">
+                        <span class="product-card__price product-card__price--old">1,200,000 $</span>
+                        <span class="product-card__price product-card__price--new">1,000,000 $</span>
+                    </div>
+                    <button class="product-card__button">Купить</button>
+                </div>
+            </div>
+
+            <div class="product-card product-card--selected">
+                <img src="../img/1 yanqwip.png" alt="Практика 1" class="product-card__image">
+                <div class="product-card__info">
+                    <h3 class="product-card__name">Эксклюзивный товар #2</h3>
+                    <p class="product-card__description">Высококачественные материалы и инновации</p>
+                    <div class="product-card__price">1,000,000 $</div>
+                    <button class="product-card__button">Купить</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../img/1 yanqwip.png" alt="Практика 1" class="product-card__image">
+                <div class="product-card__info">
+                    <h3 class="product-card__name">Эксклюзивный товар #3</h3>
+                    <p class="product-card__description">Ограниченная серия для истинных ценителей</p>
+                    <div class="product-card__price">1,000,000 $</div>
+                    <button class="product-card__button">Купить</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">Футер</p>
+    </footer>
+</div>
+<script src="../src/theme.js"></script>
+</body>
+</html>
+

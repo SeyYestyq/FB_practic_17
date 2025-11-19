@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Контакты - Портфолио Студента</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    <header class="header-main" role="banner">
+        <div class="container">
+            <div class="logo-section d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="logo-icon" aria-hidden="true">DA</div>
+                    <h1 class="student-name mb-0">Дамир Ахмеров</h1>
+                </div>
+                <button class="btn btn-outline-light" 
+                        id="themeSwitch" 
+                        type="button"
+                        aria-label="Переключить тему оформления"
+                        aria-pressed="false">
+                    <i class="bi bi-sun" aria-hidden="true"></i>
+                    <span class="visually-hidden">Переключить тему</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    
+    <nav aria-label="Основная навигация" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" role="navigation">
+        <div class="container">
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Переключить навигационное меню">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">
+                            <i class="bi bi-house-fill me-1"></i>Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">
+                            <i class="bi bi-folder-fill me-1"></i>Проекты
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="diary.html">
+                            <i class="bi bi-journal-text me-1"></i>Дневник
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacts.html" aria-current="page">
+                            <i class="bi bi-envelope-fill me-1" aria-hidden="true"></i>Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        
+  <main class="container my-5" id="main" role="main">
+        
+        <section class="mb-4" aria-labelledby="page-heading">
+            <h2 id="page-heading" class="page-title text-center mb-2" style="color: #FFD700;">
+                    Свяжитесь со мной
+            </h2>
+            <p class="text-center text-muted">Буду рад ответить на ваши вопросы</p>
+        </section>
+
+        <div class="row g-4">
+            
+            <div class="col-lg-7">
+                <div class="card shadow h-100">
+                    <div class="card-header" style="background-color: #FFD700 !important; color: #000000 !important;">
+                        <h3 id="form-heading" class="h5 mb-0" style="color: #000000 !important;">
+                            <i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>Контактная форма
+                        </h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="contactForm" 
+                              novalidate 
+                              aria-labelledby="form-heading"
+                              aria-describedby="form-description">
+                            <p id="form-description" class="visually-hidden">
+                                Заполните форму для отправки сообщения. Поля, отмеченные звездочкой, обязательны для заполнения.
+                            </p>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">
+                                    Имя <span class="text-danger" aria-label="обязательное поле">*</span>
+                                </label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="name" 
+                                       name="name" 
+                                       placeholder="Введите ваше имя" 
+                                       required
+                                       aria-required="true"
+                                       aria-invalid="false"
+                                       aria-describedby="name-error"
+                                       minlength="2"
+                                       maxlength="50"
+                                       autocomplete="name">
+                                <div id="name-error" class="invalid-feedback" role="alert" aria-live="polite">
+                                    Пожалуйста, введите ваше имя (минимум 2 символа)
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">
+                                    Email адрес <span class="text-danger" aria-label="обязательное поле">*</span>
+                                </label>
+                                <input type="email" 
+                                       class="form-control" 
+                                       id="email" 
+                                       name="email" 
+                                       placeholder="example@mail.ru" 
+                                       required
+                                       aria-required="true"
+                                       aria-invalid="false"
+                                       aria-describedby="email-error"
+                                       autocomplete="email">
+                                <div id="email-error" class="invalid-feedback" role="alert" aria-live="polite">
+                                    Пожалуйста, введите корректный email адрес
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">
+                                    Сообщение <span class="text-danger" aria-label="обязательное поле">*</span>
+                                </label>
+                                <textarea class="form-control" 
+                                          id="message" 
+                                          name="message" 
+                                          rows="6" 
+                                          placeholder="Напишите ваше сообщение..." 
+                                          required
+                                          aria-required="true"
+                                          aria-invalid="false"
+                                          aria-describedby="message-error message-hint"
+                                          minlength="10"
+                                          maxlength="150"></textarea>
+
+                                <div id="message-error" class="invalid-feedback" role="alert" aria-live="polite">
+                                    Пожалуйста, введите текст сообщения минимум 10 символов
+                                </div>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" 
+                                        class="btn btn-primary btn-lg"
+                                        aria-label="Отправить контактное сообщение">
+                                    <i class="bi bi-send-fill me-2" aria-hidden="true"></i>Отправить сообщение
+                                </button>
+                            </div>
+                        </form>
+                        
+                        
+                        <div id="successMessage" 
+                             class="alert alert-success mt-3 d-none" 
+                             role="status" 
+                             aria-live="polite" 
+                             aria-atomic="true">
+                            <i class="bi bi-check-circle-fill me-2" aria-hidden="true"></i>
+                            Сообщение успешно отправлено! Я свяжусь с вами в ближайшее время.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-5">
+                <div class="card shadow h-100">
+                    <div class="card-header" style="background-color: #FFD700 !important; color: #000000 !important;">
+                        <h3 id="contact-info-heading" class="h5 mb-0" style="color: #000000 !important;">
+                            <i class="bi bi-info-circle-fill me-2" aria-hidden="true"></i>Контакты
+                        </h3>
+                    </div>
+                    <div class="card-body p-4" aria-labelledby="contact-info-heading">
+                        
+                        <div class="contact-item mb-4 p-3 bg-light rounded">
+                            <div class="d-flex align-items-center">
+                                <div class="contact-icon me-3" aria-hidden="true">
+                                    <img src="../img/1 yanqwip.png" alt="" class="img-fluid" style="max-width: 40px; height: auto;">
+                                </div>
+                                <div>
+                                    <h4 class="h6 mb-1">Email</h4>
+                                    <a href="mailto:damirxxl_XXl@mail.ru" 
+                                       class="text-decoration-none"
+                                       aria-label="Написать на email damirxxl_XXl@mail.ru">
+                                        damirxxl_XXl@mail.ru
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="contact-item mb-4 p-3 bg-light rounded">
+                            <div class="d-flex align-items-center">
+                                <div class="contact-icon me-3" aria-hidden="true">
+                                    <i class="bi bi-github fs-2 text-dark"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h6 mb-1">GitHub</h4>
+                                    <a href="https://github.com/SeyYestyq" 
+                                       class="text-decoration-none" 
+                                       target="_blank"
+                                       rel="noopener noreferrer"
+                                       aria-label="Открыть профиль GitHub SeyYestyq (открывается в новой вкладке)">
+                                        SeyYestyq
+                                        <span class="visually-hidden">(открывается в новом окне)</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="contact-item p-3 bg-light rounded">
+                            <div class="d-flex align-items-center">
+                                <div class="contact-icon me-3" aria-hidden="true">
+                                    <i class="bi bi-geo-alt-fill fs-2 text-danger"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h6 mb-1">Местоположение</h4>
+                                    <p class="mb-0 text-muted">Москва, Россия</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="my-4" role="separator">
+
+                        
+                        <h4 class="h6 mb-3">Социальные сети:</h4>
+                        <nav aria-label="Социальные сети">
+                            <div class="d-flex gap-2 justify-content-center">
+                                <a href="#" 
+                                   class="btn btn-outline-primary" 
+                                   aria-label="Telegram">
+                                    <i class="bi bi-telegram" aria-hidden="true"></i>
+                                    <span class="visually-hidden">Telegram</span>
+                                </a>
+                                <a href="https://github.com/SeyYestyq" 
+                                   class="btn btn-outline-dark" 
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   aria-label="GitHub (открывается в новой вкладке)">
+                                    <i class="bi bi-github" aria-hidden="true"></i>
+                                    <span class="visually-hidden">GitHub</span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    <footer class="footer-main mt-5" role="contentinfo">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2025 Дамир Ахмеров. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <nav aria-label="Подвал сайта">
+                        <a href="contacts.html" class="footer-link me-3" aria-current="page">
+                            <i class="bi bi-envelope me-1" aria-hidden="true"></i>Контакты
+                        </a>
+                        <a href="https://github.com/SeyYestyq" 
+                           class="footer-link" 
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="GitHub (открывается в новой вкладке)">
+                            <i class="bi bi-github me-1" aria-hidden="true"></i>GitHub
+                            <span class="visually-hidden">(открывается в новом окне)</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../src/theme.js"></script>
+    <script src="../scripts/contacts.js"></script>
+</body>
+</html>
